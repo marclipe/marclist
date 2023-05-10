@@ -12,36 +12,49 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>MarcList</title>
+    <title>ShoppList</title>
 </head>
 <body>
     <header class="header">
-        <h1>MarcList</h1>
+        <h1>ShoppList</h1>
+        <nav>
+            <ul class="nav__info">
+                <li><a href="#">contato</a></li>
+                <li><a href="#">avaliações</a></li>
+                <li><a href="#">ajuda</a></li>
+            </ul>
+        </nav>
     </header>
-    <section class="swiper mySwiper">
+    <section class="swiper mySwiper section-carousel">
         <div class="swiper-wrapper">
-            <div class="swiper-slide first-card">
-                <img src="./img/shopping_app.png" alt="">
+            <div class="swiper-slide">
+                <div class="image-carousel">
+                    <img class="size__image-carousel" src="./img/shopping_app.svg" alt="">
+                </div>
                 <h3 class="title__carousel">Shopping Lists</h3>
                 <p class="paragraph__carousel">...made easy and 
                 convenient</p>
             </div>
             <div class="swiper-slide">
-                <img src="./img/shopping_app.png" alt="">
-                <h3 class="title__carousel">Shopping Lists</h3>
-                <p class="paragraph__carousel">...made easy and 
-                convenient</p>
+                <div class="image-carousel">
+                    <img src="./img/empty_cart.svg" class="size__image-carousel" alt="">
+                </div>
+                <h3 class="title__carousel">Never forget
+                anything on your lists</h3>
+                <p class="paragraph__carousel">...no need to memorize</p>
             </div>
             <div class="swiper-slide">
-                <img src="./img/shopping_app.png" alt="">
-                <h3 class="title__carousel">Shopping Lists</h3>
-                <p class="paragraph__carousel">...made easy and 
-                convenient</p>
+                <div class="image-carousel"><img src="./img/gone_shopping.svg" class="size__image-carousel"  alt=""></div>
+                <h3 class="title__carousel">Use shopper for your online shopping too!</h3>
+                <p class="paragraph__carousel">...make a list now, buy it later</p>
+                <br>
             </div>
         </div>
         <div class="swiper-pagination"></div>
     </section>
-    <a class="button-start" href="#">Start using Shopper</a>
+    <div class="container-button">
+        <a class="button-start" href="#">Start using ShoppList</a>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 

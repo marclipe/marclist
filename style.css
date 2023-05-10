@@ -7,12 +7,15 @@
     --color-pagination-carousel: #D9D9D9; 
 
     --font-Inter: 'Inter', sans-serif;
+    --swiper-theme-color: #43BCAE;
+    --swiper-pagination-bullet-inactive-color: white;
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* border: 1px solid red; */
 }
 
 body {
@@ -24,16 +27,26 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 6.313rem;
-
 }
 
 .header h1 {
     color: var(--color-text);
-
 }
 
-.first-card {
-    background-color: var(--bg-card-carousel);
+.section-carousel {
+    margin: 1.813rem 1.25rem 4.813rem;
+}
+
+.image-carousel {
+    margin: 4.313rem 1.25rem 4.25rem;
+    display: grid;
+    place-items: center;
+    background-image: var(--bg-card-carousel);
+}
+
+.size__image-carousel {
+    width: 100%;
+    height: 202px;
 }
 
 .title__carousel {
@@ -42,6 +55,8 @@ body {
     font-size: 1.25rem;
     line-height: 1.5rem;
     color: var(--color-text);
+    text-align: center;
+    padding-bottom: 1.25rem;
 }
 
 .paragraph__carousel {
@@ -50,6 +65,18 @@ body {
     font-size: 1rem;
     line-height: 1.188rem;
     color: var(--color-text);
+    text-align: center;
+    padding-bottom: 2.125rem;
+}
+
+.swiper-pagination-bullet {
+    border-radius: 10px;
+    width: 1.25rem;
+    height: 0.438rem;
+    background: var(--swiper-pagination-bullet-inactive-color);
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--swiper-theme-color);
 }
 
 .button-start {
@@ -66,8 +93,64 @@ body {
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 1.063rem;
-    color: #1E1E1E;
+    color: white;
+    cursor: pointer;
 }
 
 /*animation for button in css*/
-/* .button-start  */
+.button-start:hover {
+    background-color: #43bcaee3;
+    transition: background, 0.1;
+}
+
+.container-button {
+    display: grid;
+    place-items: center;
+}
+
+.nav__info {
+    visibility: hidden;
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    .header {
+        margin-top: 0;
+    }
+
+    .header h1 {
+        position: absolute;
+        left: 0;
+        padding: 1.5rem;
+    }
+
+    .nav__info {
+        visibility: visible;
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .nav__info li {
+        list-style: none;
+        align-items: center;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .nav__info a {
+        text-decoration: none;
+        color: var(--color-text);
+    }
+
+    .nav__info a:hover {
+        color: #43bcaee3;
+    } 
+
+    .container-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1.5rem;
+    }
+}
