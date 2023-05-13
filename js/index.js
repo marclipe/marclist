@@ -9,3 +9,8 @@ var swiper = new Swiper(".mySwiper", {
         delay: 2500,
     }
 });
+
+const redirectForOtherPage = document.querySelector('.button-start')
+redirectForOtherPage.addEventListener('click', () => {
+  window.location.href = "../pages/emptyList.html";
+})
