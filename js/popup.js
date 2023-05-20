@@ -30,17 +30,18 @@ window.addEventListener('DOMContentLoaded', function() {
 
       const inputValuList = listNameInput.value
       myContentList.textContent = inputValuList
-      console.log(inputValuList)
       myContentList.style.display = 'block';
       myContentList.style.margin = 'auto';
 
+      const buttonCreateList = document.querySelector(".container_create-list");
 
       // const shoppingListsContainer = document.querySelector(".shoppingListsContainer");
 
       // // const newList = document.createElement("ul");
       // // newList.innerHTML = "<li>Item 1</li>";
       // // shoppingListsContainer.appendChild(newList);
-
       popup.style.display = "none";
+      buttonCreateList.style.visibility = "visible";
+
   })
 })
